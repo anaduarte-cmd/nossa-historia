@@ -84,6 +84,45 @@ footer strong{color:var(--red)}
         display: none;
     }
 }
+#mensagem-amor {
+  display: none;
+  text-align: center;
+  margin: 25px auto;
+  animation: aparecerAmor 1s ease;
+}
+#mensagem-amor h2 {
+  color: #ff234f;
+  font-size: 32px;
+  animation: pulsarAmor 1s infinite alternate;
+  text-shadow: 0 0 15px #ff234f88;
+}
+#mensagem-amor p {
+  color: white;
+}
+.coracoes-amor {
+  color: #ff234f;
+  font-size: 32px;
+  letter-spacing: 12px;
+  animation: subirAmor 1.5s ease-in-out infinite alternate;
+}
+@keyframes aparecerAmor {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes pulsarAmor {
+  from { transform: scale(1); }
+  to { transform: scale(1.12); }
+}
+@keyframes subirAmor {
+  from { transform: translateY(5px); }
+  to { transform: translateY(-10px); }
+}
 </style>
 </head>
 <body>
@@ -162,6 +201,24 @@ if (!reduzirMovimento) {
     }
 
     setInterval(criarCoracao, 1000);
+}
+</script>
+<button class="botao" onclick="mostrarAmor()">
+  ❤️ Aperta aqui, meu amor
+</button>
+<div id="mensagem-amor">
+  <div class="coracoes-amor">♥ ♥ ♥</div>
+  <h2>EU TE AMO! ❤️</h2>
+  <p>Você é uma das partes mais lindas da minha vida. 💖</p>
+</div>
+<script>
+function mostrarAmor() {
+  const mensagem = document.getElementById("mensagem-amor");
+  mensagem.style.display = "block";
+  mensagem.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
 }
 </script>
 </body>
