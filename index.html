@@ -49,6 +49,41 @@ footer{text-align:center;color:var(--muted);padding:38px 12px 50px;font-size:.9r
 footer strong{color:var(--red)}
 @media(min-width:700px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.event{padding:24px 28px}}
 @media(max-width:540px){nav{align-items:flex-start;flex-direction:column}nav a{margin:0 12px 0 0}section{padding:52px 0}.hero{min-height:75vh}.grid{gap:10px}.tile{padding:14px;min-height:120px}}
+/* Corações flutuando pelo fundo */
+.heart-float {
+    position: fixed;
+    bottom: -40px;
+    z-index: 10;
+    pointer-events: none;
+    color: #ff233d;
+    opacity: 0;
+    animation: subirCoracao 7s ease-in infinite;
+    text-shadow: 0 0 12px #ff233d66;
+}
+
+@keyframes subirCoracao {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    15% {
+        opacity: 0.65;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(25deg);
+        opacity: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .heart-float {
+        animation: none;
+        display: none;
+    }
+}
 </style>
 </head>
 <body>
@@ -98,5 +133,29 @@ footer strong{color:var(--red)}
 </div></section>
 </main>
 <footer>feito com carinho, pensando em você <strong>♥</strong><br>Uma história que ainda está sendo escrita.</footer>
+<script>
+const reduzirMovimento = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches;
+
+if (!reduzirMovimento) {
+    function criarCoracao() {
+        const coracao = document.createElement("span");
+
+        coracao.className = "heart-float";
+        coracao.textContent = Math.random() > 0.5 ? "♥" : "♡";
+
+        coracao.style.left = Math.random() * 95 + "vw";
+        coracao.style.fontSize = (14 + Math.random() * 14) + "px";
+        coracao.style.animationDuration = (6 + Math.random() * 4) + "s";
+
+        document.body.appendChild(coracao);
+
+        setTimeout(() => coracao.remove(), 11000);
+    }
+
+    setInterval(criarCoracao, 1000);
+}
+</script>
 </body>
 </html>
