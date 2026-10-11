@@ -486,9 +486,6 @@ document.getElementById("botao-amor")
             }
         }
     </style>
-</head>
-
-<body>
 
     <header>
         <h1>Nosso Cantinho 💗</h1>
@@ -529,66 +526,6 @@ document.getElementById("botao-amor")
             <p class="data">
                 Desde 09 de agosto de 2026 ♡
             </p>
-        </section>
-
-        <!-- SURPRESA DE SAUDADE -->
-        <section class="card">
-            <h2>Está com saudade de mim? 🥺</h2>
-
-            <p style="line-height: 1.8; margin-bottom: 22px;">
-                Se a saudade apertar, aperta esse botão.
-                Preparei uma coisinha para você! 💌
-            </p>
-
-            <button
-                id="botaoCarta"
-                type="button"
-                aria-expanded="false"
-                aria-controls="carta">
-                Abra sua cartinha 💌
-            </button>
-
-            <div class="carta" id="carta" aria-hidden="true">
-                <h3>Para o meu amor 💗</h3>
-
-                <p>
-                    Oii, minha menina! ❤️
-                </p>
-
-                <p>
-                    Se você abriu essa cartinha, imagino que
-                    esteja sentindo minha falta. Queria poder
-                    estar pertinho de você agora, te dar um
-                    abraço bem apertado e fazer você sorrir.
-                </p>
-
-                <p>
-                    Mesmo quando não estamos juntas, você
-                    continua sendo uma parte muito especial
-                    dos meus dias. Eu amo nossas conversas,
-                    nossas risadas e cada pedacinho da nossa
-                    história.
-                </p>
-
-                <p>
-                    Se eu pudesse escolher um lugar para estar
-                    agora, escolheria ao seu lado. Até a gente
-                    se encontrar de novo, guarda todo esse
-                    carinho no coração e lembra que você é
-                    muito importante para mim.
-                </p>
-
-                <p>
-                    Obrigada por fazer parte da minha vida.
-                    Ainda quero viver tantas coisas lindas
-                    com você! 🥹💕
-                </p>
-
-                <p class="assinatura">
-                    Com todo o meu amor,<br>
-                    sua menina. 💗
-                </p>
-            </div>
         </section>
 
         <!-- ÁUDIO COM SUA VOZ -->
@@ -650,49 +587,5 @@ document.getElementById("botao-amor")
         atualizarContador();
         setInterval(atualizarContador, 1000);
 
-        // ABRIR E FECHAR A CARTINHA
-        const botaoCarta = document.getElementById("botaoCarta");
-        const carta = document.getElementById("carta");
-
-        botaoCarta.addEventListener("click", function () {
-            const aberta = carta.classList.toggle("aberta");
-
-            botaoCarta.setAttribute("aria-expanded", aberta);
-            carta.setAttribute("aria-hidden", !aberta);
-
-            botaoCarta.textContent = aberta
-                ? "Guardar minha cartinha 💗"
-                : "Abra sua cartinha 💌";
-
-            if (aberta) {
-                criarCoracoes();
-            }
-        });
-
-        // CORAÇÕES ANIMADOS
-        function criarCoracoes() {
-            const simbolos = ["💗", "💕", "💖", "💘", "♡"];
-
-            for (let i = 0; i < 18; i++) {
-                const coracao = document.createElement("span");
-
-                coracao.className = "coracao";
-                coracao.textContent =
-                    simbolos[Math.floor(Math.random() * simbolos.length)];
-
-                coracao.style.left = Math.random() * 100 + "vw";
-                coracao.style.fontSize =
-                    (16 + Math.random() * 20) + "px";
-                coracao.style.animationDelay =
-                    (Math.random() * 1.2) + "s";
-
-                document.body.appendChild(coracao);
-
-                coracao.addEventListener("animationend", function () {
-                    coracao.remove();
-                });
-            }
-        }
-    </script>
 </body>
 </html>
