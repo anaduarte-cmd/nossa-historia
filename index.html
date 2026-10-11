@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080808">
+<title>Nossa história ❤️</title>
+<style>
+:root{--bg:#080808;--panel:#111;--red:#ff233d;--soft:#ffdce0;--muted:#bdb5b6;--line:#54202a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top,#26080e 0%,var(--bg) 52%);color:#fff;font-family:Georgia,'Times New Roman',serif;line-height:1.65}
+a{color:var(--soft)}
+header{position:sticky;top:0;z-index:5;background:#080808e8;backdrop-filter:blur(12px);border-bottom:1px solid #321219}
+nav{max-width:980px;margin:auto;padding:12px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font-style:italic;color:var(--soft);font-size:1.15rem}
+nav a{font:500 .88rem Arial,sans-serif;text-decoration:none;margin-left:14px}
+main{max-width:900px;margin:auto;padding:0 18px}
+.hero{min-height:83vh;display:grid;place-items:center;text-align:center;padding:70px 12px;position:relative;overflow:hidden}
+.hero:before{content:"♡";position:absolute;font-size:clamp(17rem,48vw,32rem);color:#ff233d0b;line-height:1;z-index:0}
+.hero-inner{position:relative;z-index:1}
+.eyebrow{color:var(--red);letter-spacing:.24em;text-transform:uppercase;font: .72rem Arial,sans-serif}
+h1{font-size:clamp(3.5rem,12vw,7.5rem);line-height:.95;font-weight:400;font-style:italic;margin:18px 0}
+h2{font-size:clamp(2rem,7vw,3.3rem);font-style:italic;font-weight:400;color:var(--soft);margin:0 0 18px}
+h3{margin:0 0 4px;font-size:1.2rem;font-weight:400}
+p{margin:.4rem 0 1rem}
+.intro{max-width:520px;margin:20px auto;color:#e6dfe0}
+.heart{color:var(--red);font-size:1.7rem}
+.button{display:inline-block;margin-top:16px;background:var(--red);color:#fff;text-decoration:none;padding:12px 22px;border-radius:999px;font:600 .9rem Arial,sans-serif;box-shadow:0 0 25px #ff233d33}
+section{padding:68px 0;scroll-margin-top:70px}
+.section-intro{color:var(--muted);max-width:620px;margin-bottom:28px}
+.timeline{position:relative;margin:30px 0 0 9px;padding-left:26px;border-left:1px solid var(--red)}
+.event{position:relative;background:linear-gradient(135deg,#171113,#0d0d0d);border:1px solid #36151b;border-radius:16px;padding:20px;margin:0 0 22px}
+.event:before{content:"♡";position:absolute;left:-39px;top:20px;width:24px;height:24px;display:grid;place-items:center;border:1px solid var(--red);border-radius:50%;background:#10090b;color:var(--red);font-size:.9rem}
+.date{font:700 .78rem Arial,sans-serif;color:var(--red);letter-spacing:.08em;text-transform:uppercase}
+.event p{color:#d8d0d1}
+.photo-note{font:italic .85rem Arial,sans-serif;color:#9d9294;border:1px dashed #64303a;padding:10px;border-radius:8px;margin-top:12px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.tile{min-height:135px;border-radius:14px;border:1px solid #38151b;background:linear-gradient(145deg,#270b11,#111);padding:18px;display:flex;flex-direction:column;justify-content:end}
+.tile span{color:var(--red);font-size:1.5rem}
+.tile small{color:var(--muted);font: .85rem Arial,sans-serif}
+.letter{background:#f0dfd1;color:#261719;padding:clamp(22px,6vw,48px);border-radius:4px;box-shadow:7px 9px 0 #5a111c;transform:rotate(-.5deg);max-width:700px}
+.letter h3{font-style:italic;font-size:1.8rem;margin-bottom:16px}
+.letter p{font-size:1.05rem}
+.music{border:1px solid #491720;border-radius:18px;padding:24px;background:linear-gradient(135deg,#1d080d,#101010);display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.disc{width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:repeating-radial-gradient(circle,#171717 0 4px,#2a2a2a 5px 6px);color:var(--red);font-size:2rem;border:2px solid #5b202a;flex-shrink:0}
+.music a{display:inline-block;margin-top:8px;text-decoration:none;background:#241015;border:1px solid #67303a;padding:9px 14px;border-radius:999px;font: .85rem Arial,sans-serif}
+footer{text-align:center;color:var(--muted);padding:38px 12px 50px;font-size:.9rem}
+footer strong{color:var(--red)}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.event{padding:24px 28px}}
+@media(max-width:540px){nav{align-items:flex-start;flex-direction:column}nav a{margin:0 12px 0 0}section{padding:52px 0}.hero{min-height:75vh}.grid{gap:10px}.tile{padding:14px;min-height:120px}}
+</style>
+</head>
+<body>
+<header><nav><div class="brand">Nós.<span class="heart">♡</span></div><div><a href="#historia">Nossa história</a><a href="#momentos">Momentos</a><a href="#carta">Carta</a></div></nav></header>
+<main>
+<section class="hero" id="inicio"><div class="hero-inner">
+<div class="eyebrow">um cantinho só nosso</div>
+<h1>nossa<br>história <span class="heart">♡</span></h1>
+<p class="intro">Cada data guarda um pedacinho da gente. Este é um lugar para lembrar de onde tudo começou e de tudo que ainda vamos viver.</p>
+<a class="button" href="#historia">Relembrar com você ↓</a>
+</div></section>
+
+<section id="historia"><div class="eyebrow">capítulos da gente</div><h2>Nossa linha do tempo</h2><p class="section-intro"></p>
+<div class="timeline">
+<article class="event"><div class="date">💋 24 DE JUNHO DE 2026</div><h3>Nosso primeiro beijo</h3>
+<br> <br>
+<p>Um daqueles momentos que ficam guardados na memória. Quando eu lembro, ainda consigo sentir o quanto esse dia foi especial.</p><div class="photo-note">♡
+<img src="foto1.jpeg" width="300">
+</div></article>
+<article class="event"><div class="date">❤️ 9 DE AGOSTO DE 2026</div><h3>O dia em que começamos a namorar</h3><p>Foi quando a nossa história ganhou um nome. Desde então, coleciono motivos para agradecer por ter você comigo,você me faz querer ser uma pessoa melhor a cada dia que passa!.</p><div class="photo-note">♡
+<img src="foto2.jpeg" width="300">
+</div></article>
+<article class="event"><div class="date">💍 21 DE AGOSTO DE 2026</div><h3>O símbolo da nossa escolha</h3><p>Minha melhor escolha.</p><div class="photo-note">♡ 
+<img src="foto3.jpeg" width="300">
+</div></article>
+</div></section>
+
+<section id="momentos"><div class="eyebrow">pequenas coisas, grandes lembranças</div><h2>Um dos nossos momento!</h2><p class="section-intro"></p>
+<div class="grid">
+
+<div class="tile"><span>☾</span><h3>Um dia inesquecível</h3><small>Dia que a gente saiu pela primeira vez. Ali tive certeza que estava apaixonada.<img src="foto4.jpeg" width="150"> </small></div>
+</div></section>
+
+<section id="musica"><div class="eyebrow">trilha sonora</div><h2>Uma música pra nós</h2>
+<div class="music"><div class="disc">♫</div><div><h3>Jorge Ben Jor</h3><p>Não consegui configurar pra tocar nossa musica direto/sorry.</p>
+<a href="https://open.spotify.com/search/Jorge%20Ben%20Jor" target="_blank" rel="noopener">Ouvir no Spotify ↗</a> 
+<p class="section-intro" style="margin-top:14px"></p></section>
+
+<br> <br>
+<section id="carta"><div class="eyebrow">lê com carinho</div><h2>Uma carta pra você</h2>
+<div class="letter"><h3>Paixão,</h3>
+<p>Fiz este cantinho para guardar um pouco da nossa história. Cada momento com você virou uma lembrança que eu quero levar comigo.</p>
+<p>Talvez sejam só algumas datas para o resto do mundo, mas, para mim, cada uma delas tem um significado. Gosto de quem sou ao seu lado, das nossas conversas, das risadas e de tudo que ainda podemos viver.</p>
+<p>Que a gente continue se escolhendo, aprendendo juntas e criando muitos capítulos bonitos. Obrigado por fazer parte da minha vida.</p>
+<p><strong>Eu te amo. Hoje, amanhã e sempre,em cada pedacinho da nossa história. ♡</strong></p>
+<p style="text-align:right;font-style:italic">Com amor, <span contenteditable="true">seu amor</span></p>
+</div></section>
+</main>
+<footer>feito com carinho, pensando em você <strong>♥</strong><br>Uma história que ainda está sendo escrita.</footer>
+</body>
+</html>
